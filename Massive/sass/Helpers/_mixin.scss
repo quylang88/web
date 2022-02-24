@@ -1,0 +1,61 @@
+@mixin styleText($color, $fs, $fw, $letter-spacing) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin styleIcon($color, $fs) {
+    color: $color;
+    font-size: $fs;
+}
+
+@mixin arrow($size, $color, $left) {
+    content: "";
+    width: $size;
+    height: $size;
+    background-color: $color;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    left: $left;
+}
+
+@mixin styleButton($color, $bg-color, $border, $fs, $fw, $pd-y, $pd-x) {
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border;
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $pd-y $pd-x;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+@mixin styleForm($border, $width, $height) {
+    border: 1px solid $border;
+    width: $width;
+    height: $height;
+    color: $color-gray-11;
+    margin-right: $mg-0 * 2;
+    padding: $pd-0 - 4 $pd-0 + 2;
+    &::placeholder {
+        color: $color-gray-5;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        $value : map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen}` isn't exist";
+    }
+}

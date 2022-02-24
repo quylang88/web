@@ -1,0 +1,78 @@
+%section {
+    padding: $pd-2 0;
+}
+
+%background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.headingTitle {
+    text-align: center;
+    margin-bottom: $mg-4 - 20;
+    h3 {
+        text-transform: uppercase;
+    }
+    p {
+        padding-top: $pd-3;
+        line-height: $lh-2 - 5;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+%overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    transition: 0.5s;
+    opacity: 0;
+    border: 20px solid $color-black-4;
+    background-color: $color-white-1;
+    .fadeDown {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 0 $pd-0 * 2;
+        transform: translateY(-55%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .fadeUp {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(45%);
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+}
+
+%style-h4 {
+    @include styleText($color-black-1, $fs-2, $fw-0, $letter-spacing-1 - 1);
+    margin-bottom: $mg-2;
+    text-transform: uppercase;
+}
+
+%style-col {
+    text-align: center;
+    i {
+        font-size: $fs-1;
+        transition: 0.5s;
+    }
+    h4 {
+        @extend %style-h4;
+        margin-top: $mg-1;
+        transition: 0.5s;
+    }
+    p {
+        margin-top: $mg-1;
+        line-height: $lh-2 - 5;
+    }
+}
