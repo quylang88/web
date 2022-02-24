@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: $color-black-0;
+    background-color: $color-white-0;
+    font-weight: $fw-1;
+    font-size: $fs-0;
+    line-height: $lh-0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-black-1;
+    font-weight: $fw-0;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+p {
+    color: $color-gray-2;
+    line-height: $lh-2;
+}
+
+::selection{
+    background-color: $color-brown-0;
+    color: $color-white-0;
+}

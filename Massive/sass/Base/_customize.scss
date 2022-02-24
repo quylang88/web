@@ -1,0 +1,21 @@
+.owl-theme {
+    .owl-dots {
+        .owl-dot {
+            opacity: 0.5;
+            span {
+                width: 12px;
+                height: 12px;
+            }
+            &:focus {
+                outline: none;
+            }
+            &.active,
+            &:hover {
+                opacity: 1;
+                span {
+                    background-color: $color-white-0;
+                }
+            }
+        }
+    }
+}
