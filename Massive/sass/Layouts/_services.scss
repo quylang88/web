@@ -1,0 +1,18 @@
+#services {
+    @extend %section;
+    .services__items {
+        @extend %style-col;
+        padding: $pd-2 / 2;
+        border: 1px solid $color-white-3;
+        transition: 0.5s;
+        &:hover {
+            background-color: $color-black-2;
+            i {
+                color: $color-brown-0;
+            }
+            h4 {
+                color: $color-white-0;
+            }
+        }
+    }
+}

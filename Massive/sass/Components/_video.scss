@@ -1,0 +1,10 @@
+.video{
+    @extend %section;
+    .video__content{
+        display: flex;
+        justify-content: center;
+        iframe{
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.purchase {
+    background-color: $color-black-2;
+    padding: $pd-3 * 2 0;
+    text-transform: uppercase;
+    .purchase__content {
+        color: $color-white-0;
+        h3 {
+            @include styleText($color-white-0, $fs-4, $fw-0, $letter-spacing-1 - 1);
+            span {
+                color: $color-brown-0;
+            }
+        }
+    }
+    @include responsive("medium"){
+        .purchase__content{
+            h3{
+                font-size: $fs-2;
+                margin-bottom: $mg-2;
+            }
+        }
+    }
+}

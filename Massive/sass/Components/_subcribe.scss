@@ -1,0 +1,13 @@
+.subcribe{
+    @extend %section;
+    background-color: $color-gray-8;
+    text-align: center;
+    .subcribe__title{
+        h3{
+            @include styleText($color-brown-0, $fs-4, $fw-0, $letter-spacing-1 - 1);
+        }
+        p{
+            margin: $mg-2 / 2 0 $mg-1 * 2;
+        }
+    }
+}

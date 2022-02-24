@@ -1,0 +1,13 @@
+#contact {
+    padding: $pd-2 + 50 0;
+    @extend %background;
+    background-image: url(../img/15.jpeg);
+    .contact__items {
+        @extend %style-col;
+        h4,
+        p,
+        i {
+            color: $color-white-0;
+        }
+    }
+}

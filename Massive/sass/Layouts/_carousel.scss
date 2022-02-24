@@ -1,0 +1,63 @@
+.massiveCarousel {
+    position: relative;
+    #massiveCarousel {
+        .carousel-indicators {
+            margin-bottom: $mg-1;
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid $color-white-0;
+                background-color: transparent;
+                opacity: 1;
+                &.active {
+                    background-color: $color-white-0;
+                }
+            }
+        }
+        .carousel-inner {
+            .carousel-item {
+                .carousel-caption {
+                    top: 40%;
+                    left: 12%;
+                    text-align: left;
+                    h1 {
+                        span {
+                            font-size: $fs-2;
+                        }
+                    }
+                }
+            }
+        }
+        .massiveCarousel__control {
+            width: 30%;
+            margin-top: $mg-3;
+            margin-bottom: $mg-4;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        #massiveCarousel {
+            .carousel-inner {
+                .carousel-item {
+                    img {
+                        height: 100vh;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        #massiveCarousel {
+            .carousel-inner {
+                .carousel-item {
+                    .carousel-caption {
+                        h1 {
+                            font-size: $fs-4 + 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

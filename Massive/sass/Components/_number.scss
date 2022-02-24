@@ -1,0 +1,30 @@
+.number {
+    @extend %background;
+    padding: $pd-2 * 2 0;
+    background-image: url(../img/7.jpeg);
+    .number__content {
+        position: relative;
+        color: $color-white-0;
+        text-transform: uppercase;
+        display: flex;
+        .number__icon {
+            font-size: $fs-1;
+        }
+        .number__info {
+            padding-left: $pd-3 + 40;
+            h1 {
+                color: $color-white-0;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 75px;
+                width: 1px;
+                height: 80px;
+                transform: rotate(30deg);
+                background: $color-white-4;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.feedback {
+    @extend %section, %background;
+    height: 100%;
+    background-image: url(../img/19.jpeg);
+    .feedback__content {
+        .feedback__img {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto $mg-0 * 10;
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .feedback__info {
+            text-align: center;
+            color: $color-white-0;
+            p {
+                width: 60%;
+                margin: 0 auto $mg-0 + 5;
+                color: $color-white-0;
+                font-style: italic;
+            }
+            .feedback__name {
+                text-transform: uppercase;
+                font-size: $fs-0 - 1;
+                letter-spacing: $letter-spacing-1;
+                span {
+                    font-size: $fs-0 - 3;
+                    display: block;
+                }
+            }
+        }
+    }
+    .owl-theme {
+        .owl-dots {
+            margin-top: $mg-0 + 15 !important;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+#team {
+    @extend %section;
+    background-color: $color-gray-8;
+    .team__content {
+        padding: 0 $pd-3;
+        .about__member {
+            position: relative;
+            overflow: hidden;
+            .about__img {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .about__title {
+                    position: absolute;
+                    right: 0;
+                    bottom: 30px;
+                    width: 70%;
+                    padding: $pd-0 $pd-0 * 2;
+                    text-align: right;
+                    background: $color-black-3;
+                    text-transform: uppercase;
+                    h5{
+                        @include styleText($color-white-0, $fs-0 - 1, $fw-0, $letter-spacing-1);
+                    }
+                    span{
+                        @include styleText($color-white-4, $fs-0 - 3, $fw-0, $letter-spacing-1);
+                    }
+                }
+            }
+            .about__overlay{
+                @extend %overlay;
+                text-align: center;
+                .fadeDown{
+                    h4{
+                        @include styleText($color-black-2, $fs-0 - 1, $fw-0, $letter-spacing-2);
+                        text-transform: uppercase;
+                        margin-bottom: $mg-2 + 5;
+                    }
+                    p{
+                        @include styleText($color-gray-2, $fs-0 - 1, $fw-0, $letter-spacing-0);
+                        margin-bottom: 0;
+                    }
+                }
+                .fadeUp{
+                    a{
+                        color: $color-black-2;
+                        font-size: $fs-0 + 1;
+                        margin: 0 $mg-0 * 2;
+                    }
+                }
+            }
+            &:hover{
+                .about__overlay{
+                    opacity: 1;
+                    .fadeDown{
+                        top: 35%;
+                        opacity: 1;
+                    }
+                    .fadeUp{
+                        bottom: 10%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

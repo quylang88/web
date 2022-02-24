@@ -1,0 +1,21 @@
+#features{
+    @extend %section;
+    .features__img{
+        padding: 0 $pd-3 / 2;
+        img{
+            width: 100%;
+        }
+    }
+    .features__items{
+        .features__number{
+            @include styleText($color-gray-4, $fs-1, $fw-0, $letter-spacing-1 - 1);
+        }
+        h4{
+            @extend %style-h4;
+        }
+        p{
+            line-height: $lh-2 - 5;
+            margin-bottom: $mg-0 * 10;
+        }
+    }
+}

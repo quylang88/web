@@ -1,0 +1,36 @@
+.about {
+    @extend %section;
+    .about__content {
+        position: relative;
+        padding: $pd-3;
+        border: 1px solid $color-gray-6;
+        border-radius: $border-radius + 2;
+        .about__icon {
+            @include styleIcon($color-white-0, $fs-3);
+            position: absolute;
+            top: -30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            border-radius: $border-radius + 2;
+            background: $color-black-2;
+            box-shadow: 0 0 0 10px $color-white-0;
+            line-height: 60px;
+            transition: .3s ease;
+        }
+        .about__title{
+            margin-top: $mg-1;
+            h4{
+                @extend %style-h4;
+            }
+            p{
+                line-height: $lh-2 - 5;
+                margin-bottom: 0;
+            }
+        }
+        &:hover .about__icon{
+            background-color: $color-brown-0;
+        }
+    }
+}

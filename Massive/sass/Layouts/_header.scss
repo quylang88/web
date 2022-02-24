@@ -1,0 +1,112 @@
+header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .massiveNavBar {
+        height: 100px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0;
+        .navbar-brand {
+            height: 96px;
+            width: auto;
+            img {
+                max-height: 100%;
+                padding: $pd-1 0;
+            }
+        }
+        #massiveNavBar {
+            height: 100%;
+            .navbar-nav {
+                height: 100%;
+                .nav-item {
+                    .nav-link {
+                        @include styleText($color-black-1, $fs-0 - 2, $fw-0, $letter-spacing-0);
+                        text-transform: uppercase;
+                        padding: 0 $pd-0 + 2;
+                        height: 100%;
+                        line-height: $lh-1;
+                        transition: 0.5s;
+                    }
+                    &:hover .nav-link {
+                        color: $color-brown-0;
+                    }
+                    &.active .nav-link {
+                        color: $color-brown-0;
+                    }
+                }
+            }
+        }
+    }
+    &#headerFixed {
+        position: fixed;
+        background-color: $color-white-0;
+        transition: 0.5s;
+        box-shadow: 0 2px 2px $color-black-4;
+        .massiveNavBar {
+            height: 60px;
+            .navbar-brand {
+                height: 70px;
+            }
+        }
+        #massiveNavBar {
+            height: 100%;
+            .navbar-nav {
+                height: 100%;
+                .nav-item {
+                    .nav-link {
+                        height: 100%;
+                        line-height: $lh-2 * 2;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .massiveNavBar {
+            .navbar-brand {
+                height: 85px;
+            }
+            #massiveNavBar {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            font-size: 1.4vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        display: none;
+        &#headerFixed {
+            display: block;
+            .massiveNavBar {
+                .navbar-toggler {
+                    span {
+                        color: $color-gray-2;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                #massiveNavBar {
+                    .navbar-nav {
+                        .nav-item {
+                            background-color: $color-white-0;
+                            border-bottom: 1px solid $color-gray-6;
+                            box-shadow: 0 2px 2px $color-black-4;
+                            .nav-link {
+                                font-size: $fs-0 - 2;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

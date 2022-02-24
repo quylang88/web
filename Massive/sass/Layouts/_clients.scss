@@ -1,0 +1,22 @@
+.clients {
+    @extend %section;
+    .clients__carousel {
+        padding: 0 $pd-3;
+        .clients__items {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .owl-theme {
+        .owl-dots {
+            margin-top: $mg-2 !important;
+            .owl-dot {
+                span {
+                    background-color: $color-gray-12;
+                }
+            }
+        }
+    }
+}

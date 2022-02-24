@@ -1,0 +1,79 @@
+#blog {
+    @extend %section;
+    .blog__img {
+        padding: 0;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &.blog__img--top::after {
+            @include arrow(15px, $color-white-0, 50%);
+            bottom: -7px;
+        }
+        &.blog__img--bot::before {
+            @include arrow(15px, $color-white-0, 50%);
+            top: -7px;
+        }
+    }
+    .blog__info {
+        height: 100%;
+        padding: 0 $pd-3 - 5;
+        display: flex;
+        align-items: center;
+        p {
+            letter-spacing: $letter-spacing-1;
+            font-size: $fs-0 - 1;
+            margin-bottom: $mg-1 - 5;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 30px;
+                left: 0;
+                width: 60px;
+                height: 1px;
+                background: $color-black-2;
+            }
+        }
+        a {
+            text-decoration: none;
+            h4 {
+                @extend %style-h4;
+                transition: 0.5s;
+                &:hover {
+                    color: $color-brown-0;
+                }
+            }
+        }
+        .blog__postCat {
+            a {
+                @include styleText($color-gray-10, $fs-0 - 3, $fw-0, $letter-spacing-1 - 1);
+                margin-right: $mg-0 + 5;
+                transition: 0.5s;
+                &::after {
+                    content: ",";
+                }
+                &:hover {
+                    color: $color-brown-0;
+                }
+            }
+        }
+    }
+    .blog__viewAll {
+        display: flex;
+        justify-content: center;
+        margin-top: $mg-0 * 10;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.5s;
+            @include styleText($color-gray-5, $fs-0, $fs-0, $letter-spacing-1 - 1);
+            i {
+                margin-left: $mg-0 * 2;
+            }
+            &:hover {
+                color: $color-black-2;
+            }
+        }
+    }
+}

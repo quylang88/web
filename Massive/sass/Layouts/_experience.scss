@@ -1,0 +1,91 @@
+.experience {
+    height: 100%;
+    background-image: url(../img/4.jpeg);
+    position: relative;
+    @extend %background, %section;
+    .experience__overlay {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $color-black-6;
+    }
+    .row {
+        .experience__left {
+            display: table;
+            height: 400px;
+            width: 100%;
+            h3 {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                letter-spacing: 6px;
+                @include styleText($color-white-0, $fs-4, $fw-0, $letter-spacing-3);
+                text-transform: uppercase;
+            }
+        }
+        .experience__right {
+            padding: 0 $pd-3;
+            h4 {
+                @extend %style-h4;
+                color: $color-white-0;
+                margin-bottom: $mg-1;
+            }
+            p {
+                color: $color-white-0;
+                margin-bottom: $mg-1 * 2;
+            }
+            .experience__progress {
+                margin-top: $mg-0 * 2;
+                margin-bottom: $mg-0 * 10;
+                text-transform: uppercase;
+                height: 20px;
+                border-radius: 0;
+                font-weight: $fw-1;
+                background-color: $color-gray-0;
+                overflow: visible;
+                .progress-bar {
+                    background-color: $color-white-0;
+                    text-align: left;
+                    padding-left: $pd-0;
+                    overflow: visible;
+                    position: relative;
+                    @include styleText($color-black-2, $fs-0 - 5, $fw-1, $letter-spacing-1 - 1);
+                    span {
+                        position: absolute;
+                        top: -28px;
+                        right: -5px;
+                        display: inline-block;
+                        min-width: 25px;
+                        height: 20px;
+                        padding: 0 $pd-0 - 2;
+                        text-align: center;
+                        letter-spacing: 0;
+                        color: $color-black-2;
+                        border-radius: $border-radius-0;
+                        background-color: $color-gray-7;
+                        line-height: $lh-2 - 10;
+                        &::after {
+                            @include arrow(5px, $color-gray-7, 15px);
+                            bottom: -2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .experience__overlay {
+            display: none;
+        }
+        .row {
+            .experience__left {
+                h3 {
+                    font-size: $fs-2;
+                }
+            }
+        }
+    }
+}

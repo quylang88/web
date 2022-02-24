@@ -1,0 +1,92 @@
+#portfolio {
+    @extend %section;
+    padding-bottom: 0;
+    width: 98%;
+    margin: 0 auto;
+    #porfolio__tab {
+        border: none;
+        margin-bottom: $mg-0 * 10;
+        display: flex;
+        justify-content: center;
+        .nav-item{
+            .nav-link{
+                @include styleText($color-gray-3, $fs-0 - 1, $fw-0, $letter-spacing-1 + 1);
+                text-transform: uppercase;
+                margin: 0 $mg-1 / 2;
+                padding: 0;
+                border: none;
+                transition: .5s;
+                &.active{
+                    color: $color-black-2;
+                }
+                &:hover{
+                    color: $color-black-2;
+                }
+            }
+        }
+    }
+    #porfolio__tabContent {
+        .portfolio__content {
+            padding: $pd-0;
+            .portfolio__items {
+                position: relative;
+                overflow: hidden;
+                transition: .5s;
+                img {
+                    width: 100%;
+                }
+                .portfolio__overlay {
+                    @extend %overlay;
+                    text-align: center;
+                    text-transform: uppercase;
+                    a {
+                        text-decoration: none;
+                    }
+                    .fadeDown {
+                        i {
+                            font-size: $fs-1 - 1;
+                            color: $color-black-2;
+                        }
+                    }
+                    .fadeUp {
+                        h4 {
+                            transition: .5s;
+                            a {
+                                @include styleText($color-black-2, $fs-0 - 1, $fw-0, $letter-spacing-2);
+                            }
+                            &:hover {
+                                a {
+                                    color: $color-brown-0;
+                                }
+                            }
+                        }
+                        p {
+                            transition: .5s;
+                            a {
+                                @include styleText($color-gray-9, $fs-0 - 3, $fw-0, $letter-spacing-1);
+                            }
+                            &:hover {
+                                a {
+                                    color: $color-brown-0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .portfolio__overlay {
+                        opacity: 1;
+                        .fadeDown {
+                            top: 35%;
+                            opacity: 1;
+                        }
+                        .fadeUp {
+                            bottom: 30%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

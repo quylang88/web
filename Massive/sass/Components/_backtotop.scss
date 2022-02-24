@@ -1,0 +1,27 @@
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    visibility: hidden;
+    opacity: 0;
+    i {
+        color: $color-white-0;
+        font-size: $fs-0 - 1;
+        background-color: $color-black-5;
+        text-align: center;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        transition: .5s;
+    }
+    &:hover{
+        i{
+            background-color: $color-brown-0;
+        }
+    }
+}
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
