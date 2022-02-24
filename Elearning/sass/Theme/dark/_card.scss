@@ -1,0 +1,40 @@
+.darkMode{
+    .card{
+        background-color: $color-dark-0;
+        border: 1px solid $color-dark-2;
+        .card-body{
+            .card-title{
+                color: $color-dark-6;
+            }
+            .card-text{
+                color: $color-dark-4;
+            }
+            .card__stars{
+                .card__rating{
+                    color: $color-dark-6;
+                }
+                .card__total{
+                    color: $color-dark-4;
+                }
+            }
+            .card__price{
+                span:first-child{
+                    color: $color-dark-4;
+                }
+                span:last-child{
+                    color: $color-dark-6;
+                }
+            }
+        }
+    }
+    .card--feedback{
+        background-color: $color-dark-5;
+        .card-body{
+            .card__top{
+                .card__name{
+                    color: $color-dark-6;
+                }
+            }
+        }
+    }
+}

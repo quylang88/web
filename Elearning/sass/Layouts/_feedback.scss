@@ -1,0 +1,11 @@
+.feedback{
+    padding: $pd-3 + 10 0;
+    .feedback__content{
+        width: 90%;
+        margin: 0 auto;
+        h2{
+            font-size: $fs-5;
+            margin-bottom: $mg-2;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.myNavBar {
+    box-shadow: 0 0 1px 1px $color-black-1, 0 3px 1px 0 $color-black-1;
+    .myNavBar__col {
+        padding-left: 0;
+        .myNavBar__left {
+            display: flex;
+            align-items: center;
+            .navbar-brand {
+                flex-grow: 1;
+                text-align: center;
+                margin-right: 0;
+                img {
+                    width: 110px;
+                }
+                .logo-dark{
+                    display: none;
+                }
+                .logo-light{
+                    display: inline-block;
+                }
+            }
+            .myNavBar__categories {
+                flex-grow: 1;
+                text-align: center;
+                @include styleText($color-black-light, $fs-1, $fw-0);
+                cursor: pointer;
+                i {
+                    color: $color-gray-3;
+                }
+            }
+            .myNavBar__form-search {
+                flex-grow: 8;
+                @include styleFormSearch($color-white-1, $color-white-0, $color-gray-4, $color-black-light);
+            }
+        }
+        .myNavBar__right {
+            .navbar-nav {
+                justify-content: space-between;
+                align-items: center;
+                .nav-item {
+                    padding: $pd-2 + 2 $pd-2;
+                    border-radius: $border-radius + 1;
+                    position: relative;
+                    .nav-link {
+                        @include styleText($color-black-light, $fs-1, $fw-0);
+                    }
+                    &:hover {
+                        background-color: $color-gray-1;
+                        .overlay {
+                            display: block;
+                        }
+                    }
+                    .overlay {
+                        display: none;
+                        background-color: $color-white-0;
+                        width: 330px;
+                        padding: $pd-1 + 5;
+                        text-align: center;
+                        position: absolute;
+                        z-index: 1;
+                        top: 60px;
+                        right: 0;
+                        border-top: 1px solid $color-gray-1;
+                        box-shadow: 0 4px 16px $color-gray-5;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: -9px;
+                            right: 10%;
+                            background-color: $color-white-0;
+                            border-top: 1px solid $color-gray-1;
+                            border-left: 1px solid $color-gray-1;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                .myNavBar__cart {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 20px;
+                    border-radius: 50%;
+                    text-align: center;
+                    .nav-link {
+                        font-size: $fs-3 + 2;
+                    }
+                }
+                .myNavBar__buttons {
+                    display: flex;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    .button--white {
+                        margin-right: $mg-0;
+                    }
+                    .button {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1355px) {
+        .myNavBar__col {
+            .myNavBar__right {
+                .navbar-nav {
+                    .nav-item {
+                        white-space: nowrap;
+                        .nav-link {
+                            font-size: $fs-1 - 1;
+                        }
+                        .overlay{
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("extra-large") {
+        .business,
+        .instructor {
+            display: none;
+        }
+        .myNavBar__col {
+            .myNavBar__right {
+                .navbar-nav {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+    @include responsive("medium"){
+        .myNavBar__col{
+            .myNavBar__left{
+                .myNavBar__categories, .myNavBar__form-search{
+                    display: none;
+                }
+            }
+            .myNavBar__right{
+                .navbar-nav{
+                    .myNavBar__buttons{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
